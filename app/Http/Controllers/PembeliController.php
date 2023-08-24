@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pembeli;
 use Illuminate\Http\Request;
 
 class PembeliController extends Controller
@@ -28,10 +29,10 @@ class PembeliController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->except(['_token', 'submit']));
-        // Tamu::create($request->except(['_token', 'submit']));
+        // dd($request->except(['_token', 'submit']));
+        Pembeli::create($request->except(['_token', 'submit']));
 
-        // return redirect('/data-tamu');
+        return redirect('/home');
     }
 
     /**

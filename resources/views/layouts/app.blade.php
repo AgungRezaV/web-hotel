@@ -16,23 +16,17 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-white px-lg-3 py-lg-2 shadow-sm sticky-top">
     <div class="container-fluid">
-      <a class="navbar-brand me-5 fw-bold fs-3 h-font" href="#">Hotel</a>
+      <a class="navbar-brand me-5 fw-bold fs-3 h-font" href="/home">Hotel</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav fw-semibold">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="/home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Hotel</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Harga</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Tentang Kami</a>
+            <a class="nav-link" href="/input">Reservation</a>
           </li>
         </ul>
       </div>
