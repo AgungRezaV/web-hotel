@@ -14,12 +14,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('/home', function () {
     return view('home');
 });
 
-Route::get('input', [PembeliController::class, 'index'])->name('input');
+//Input
+Route::get('input', [PembeliController::class, 'create'])->name('create');
+
+//Save Input
+Route::post('/store', [PembeliController::class, 'store'])->name('store');
+

@@ -11,7 +11,7 @@
 
 @section('content')
 <!-- Swiper -->
-<div class="swiper mySwiper rounded">
+<div class="swiper mySwiper rounded shadow">
     <div class="swiper-wrapper">
         <div class="swiper-slide">
             <img src="{{asset('img/hotels1.jpg')}}" alt="Testing" class="">
@@ -28,7 +28,7 @@
     <div class="swiper-pagination"></div>
 </div>
 
-{{-- Our Rooms Section --}}
+{{-- Jenis Kamar Section --}}
 <h2 class="mt-5 pt-4 mb-4 text-center fw-bold">Jenis Kamar</h2>
 
 <div class="container">
@@ -56,7 +56,7 @@
                         <i class="fa-solid fa-star text-warning"></i>
                         <i class="fa-solid fa-star"></i>
                     </div>
-                    <a href="#" class="btn btn-success btn-md text-white shadow-none">Book Now</a>
+                    <a href="/input" class="btn btn-success btn-md text-white shadow-none">Book Now</a>
                 </div>
             </div>
         </div>
@@ -84,7 +84,7 @@
                         <i class="fa-solid fa-star text-warning"></i>
                         <i class="fa-solid fa-star"></i>
                     </div>
-                    <a href="#" class="btn btn-success btn-md text-white shadow-none">Book Now</a>
+                    <a href="/input" class="btn btn-success btn-md text-white shadow-none">Book Now</a>
                 </div>
             </div>
         </div>
@@ -113,7 +113,7 @@
                         <i class="fa-solid fa-star text-warning"></i>
                         <i class="fa-solid fa-star text-warning"></i>
                     </div>
-                    <a href="#" class="btn btn-success btn-md text-white shadow-none">Book Now</a>
+                    <a href="/input" class="btn btn-success btn-md text-white shadow-none">Book Now</a>
                 </div>
             </div>
         </div>
@@ -121,7 +121,7 @@
     </div>
 </div>
 
-{{-- About Us Section --}}
+{{-- Tentang Kami Section --}}
 <h2 class="mt-5 pt-4 mb-4 text-center fw-bold">Tentang Kami</h2>
 
 <div class="container">

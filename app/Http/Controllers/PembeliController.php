@@ -12,7 +12,7 @@ class PembeliController extends Controller
     public function index()
     {
         //
-        return view('input');
+        // return view('input');
     }
 
     /**
@@ -20,7 +20,7 @@ class PembeliController extends Controller
      */
     public function create()
     {
-        //
+        return view('input');
     }
 
     /**
@@ -28,7 +28,10 @@ class PembeliController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request->except(['_token', 'submit']));
+        // Tamu::create($request->except(['_token', 'submit']));
+
+        // return redirect('/data-tamu');
     }
 
     /**
