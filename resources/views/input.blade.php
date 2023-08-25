@@ -4,12 +4,14 @@
     <div style="padding: 24px 0px 24px 0px">
         <form class="container p-4 bg-light rounded" action="/store" method="POST">
             @csrf
-            {{-- <h1 style="margin: 0px 0px 30px 0px">Form Data</h1> --}}
+
+            {{-- Nama Pemesan  --}}
             <div class="mb-3">
                 <label class="form-label">Nama Pemesan <span style="color: red">*</span></label>
                 <input required type="text" class="form-control" name="nama_pemesan" placeholder="Nama Lengkap">
             </div>
 
+            {{-- Kelamin --}}
             <div class="mb-3">
                 <label class="form-label form-check-inline">Jenis Kelamin</label>
                 <div class="form-check">
@@ -23,12 +25,14 @@
                 </div>
             </div>
 
+            {{-- Nomor Identitas --}}
             <div class="mb-3">
                 <label class="form-label">Nomor Identitas <span style="color: red">*</span></label>
                 <input required type="number" placeholder="16" class="form-control" name="nomor_identitas" oninput="validateIdentitas(this)">
                 <small id="identitasWarning" class="form-text text-danger" style="display:none;">Nomor Identitas terdiri maksimal 16 karakter.</small>
             </div>
 
+            {{-- Tipe Kamar --}}
             <div class="mb-3">
                 <label for="" class="form-label">Tipe Kamar <span style="color: red">*</span></label>
                 <select required name="tipe_kamar" class="form-select" onchange="updateHarga()">
@@ -39,12 +43,15 @@
                 </select>
             </div>
 
-            <div class="mb-3">
-                <label for="" class="form-label">Harga</label>
-                <input required type="number" class="form-control" placeholder="Harga" id="inputHarga" name="harga" readonly>
-                <div id="emailHelp" class="form-text">*Harga akan muncul setelah memilih kamar.</div>
+            {{-- Harga --}}
+            <label for="" class="form-label">Harga</label>
+            <div class="input-group mb-3">
+                <span class="input-group-text">Rp</span>
+                <input required type="number" class="form-control bg-light fw-bold" placeholder="Harga" id="inputHarga" name="harga" readonly>
+                {{-- <div id="emailHelp" class="form-text">*Harga akan muncul setelah memilih kamar.</div> --}}
             </div>
 
+            {{-- Input Group Tanggal Pesan, durasi, breakfast --}}
             <div class="row g-3 mb-3">
                 <div class="col-md-6">
                     <label>Tanggal Pesan<span style="color: red">*</span></label>
@@ -53,17 +60,18 @@
             
                 <div class="col-md-4">
                     <label>Durasi Menginap<span style="color: red">*</span></label>
-                    <input required type="number" class="form-control" placeholder="Hari" min="0" id="inputDurasi" name="durasi_menginap" oninput="validateHari(this)">
+                    <input required type="number" class="form-control" placeholder="Hari" min="0" id="inputDurasi" name="durasi_menginap" oninput="validateHari(this)" onchange="inputDiskonDatabase()">
                     <small id="hariWarning" class="form-text text-danger" style="display:none;">Durasi Menginap melebihi Batas.</small>
-                    {{-- <small id="identitasWarning" class="form-text text-danger" style="display:none;">Nomor Identitas terdiri maksimal 16 karakter.</small> --}}
+                    <input hidden type="number" name="diskon" id="inputDiskon">
                 </div>
 
                 <div class="col-sm-2">
                     <label>Termasuk Breakfast</label><br>
-                    <input class="form-check-input" type="checkbox" value="Ya" id="inputBreakfast" name="breakfast" onchange="updateBreakfastValue()"> Ya
+                    <input class="form-check-input" type="checkbox" value="Ya" id="inputBreakfast" name="breakfast"> Ya
                 </div>
             </div>
 
+            {{-- Total Bayar --}}
             <div class="mb-3">
                 <label class="form-label">Total Bayar</label>
                 <input required type="number" class="form-control" placeholder="Total Bayar" id="inputTotalBayar" name="total_bayar" readonly>
@@ -93,7 +101,7 @@
         }
 
         function validateHari(input) {
-            var maxHari = 30; // Misalnya, Anda dapat mengganti nilainya sesuai kebutuhan
+            var maxHari = 31; // Misalnya, Anda dapat mengganti nilainya sesuai kebutuhan
             var hariWarning = document.getElementById("hariWarning");
             var enteredValue = parseInt(input.value);
 
@@ -106,7 +114,18 @@
             }
         }
 
-        
+        //Input diskon ke database ketika ada durasi hari lebih dari 3
+        function inputDiskonDatabase() {
+            var durasiCheck = document.getElementById("inputDurasi");
+            var inputDiskon = document.getElementById("inputDiskon");
+
+            if (durasiCheck.value > 3) {
+                inputDiskon.value = 10;
+            } else {
+                inputDiskon.value = 0;
+            }
+        }
+
         //Perhitungan Harga
         function updateHarga() {
             var tipeKamarSelect = document.getElementsByName("tipe_kamar")[0];
@@ -118,6 +137,8 @@
                 inputHarga.value = "800000";
             } else if (tipeKamarSelect.value === "Family") {
                 inputHarga.value = "1200000";
+            } else {
+                inputHarga.value = "";
             }
         }
 
