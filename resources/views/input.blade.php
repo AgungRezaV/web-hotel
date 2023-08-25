@@ -2,16 +2,16 @@
 
 @section('content')
     <div style="padding: 24px 0px 24px 0px">
-        <form class="container" action="/store" method="POST">
+        <form class="container p-4 bg-light rounded" action="/store" method="POST">
             @csrf
             {{-- <h1 style="margin: 0px 0px 30px 0px">Form Data</h1> --}}
             <div class="mb-3">
-                <label for="" class="form-label">Nama Pemesan <span style="color: red">*</span></label>
+                <label class="form-label">Nama Pemesan <span style="color: red">*</span></label>
                 <input required type="text" class="form-control" name="nama_pemesan" placeholder="Nama Lengkap">
             </div>
 
             <div class="mb-3">
-                <label for="" class="form-label form-check-inline">Jenis Kelamin</label>
+                <label class="form-label form-check-inline">Jenis Kelamin</label>
                 <div class="form-check">
                     <label class="form-check-label">Laki-laki</label>
                     <input required class="form-check-input" type="radio" value="Laki-laki" name="jenis_kelamin">
@@ -24,7 +24,7 @@
             </div>
 
             <div class="mb-3">
-                <label for="" class="form-label">Nomor Identitas <span style="color: red">*</span></label>
+                <label class="form-label">Nomor Identitas <span style="color: red">*</span></label>
                 <input required type="number" placeholder="16" class="form-control" name="nomor_identitas" oninput="validateIdentitas(this)">
                 <small id="identitasWarning" class="form-text text-danger" style="display:none;">Nomor Identitas terdiri maksimal 16 karakter.</small>
             </div>
@@ -45,36 +45,35 @@
                 <div id="emailHelp" class="form-text">*Harga akan muncul setelah memilih kamar.</div>
             </div>
 
-            <div class="row">
-                <div class="mb-3 col-sm">
-                    <label for="">Tanggal Pesan<span style="color: red">*</span></label>
-                    <input required type="date" placeholder="DD/MM/YY" name="tanggal_pesan">
+            <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                    <label>Tanggal Pesan<span style="color: red">*</span></label>
+                    <input required type="date" class="form-control" name="tanggal_pesan">
+                </div>
+            
+                <div class="col-md-4">
+                    <label>Durasi Menginap<span style="color: red">*</span></label>
+                    <input required type="number" class="form-control" placeholder="Hari" min="0" id="inputDurasi" name="durasi_menginap" oninput="validateHari(this)">
+                    <small id="hariWarning" class="form-text text-danger" style="display:none;">Durasi Menginap melebihi Batas.</small>
+                    {{-- <small id="identitasWarning" class="form-text text-danger" style="display:none;">Nomor Identitas terdiri maksimal 16 karakter.</small> --}}
                 </div>
 
-                <div class="mb-3 col-sm">
-                    <label for="">Durasi Menginap<span style="color: red">*</span></label>
-                    <input required type="number" placeholder="Hari" min="0" id="inputDurasi" name="durasi_menginap" oninput="validateHari(this)"> Hari
-                    <small id="hariWarning" class="form-text text-danger" style="display:none;">Hari melebihi jumlah batas.</small>
-                </div>
-
-                <div class="mb-3 col-sm">
-                    <label for="">Termasuk Breakfast (Opsional)</label>
-                    <input class="form-check-input" type="checkbox" value="Ya" id="inputBreakfast" name="breakfast" onchange="updateBreakfastValue()"> Ya            
+                <div class="col-sm-2">
+                    <label>Termasuk Breakfast</label><br>
+                    <input class="form-check-input" type="checkbox" value="Ya" id="inputBreakfast" name="breakfast" onchange="updateBreakfastValue()"> Ya
                 </div>
             </div>
 
             <div class="mb-3">
-                <label for="" class="form-label">Total Bayar</label>
+                <label class="form-label">Total Bayar</label>
                 <input required type="number" class="form-control" placeholder="Total Bayar" id="inputTotalBayar" name="total_bayar" readonly>
             </div>
 
             {{-- Tombol Cek Harga --}}
-            <div class="mb-3">
-                <button type="button" class="btn btn-success" onclick="updateTotalBayar()">Hitung Total Bayar</button>
-            </div>
+            <button type="button" class="btn btn-primary" onclick="updateTotalBayar()">Hitung Total Bayar</button>
 
             <!-- Button Submit Input -->
-            <button type="submit" name="submit" value="Save" class="btn btn-primary" onclick="updateTotalBayar()">Submit</button>
+            <button type="submit" name="submit" value="Save" class="btn btn-success" onclick="updateTotalBayar()">Submit</button>
         </form>
     </div>
 

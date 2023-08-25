@@ -39,7 +39,7 @@
                 <img src="{{asset('img/hotels1.jpg')}}" alt="Rooms Standard" class="card-img-top">
                 <div class="card-body">
                     <h5>Standar</h5>
-                    <h6 class="mb-4">Rp 300.000/Malam</h6>
+                    <h6 class="mb-4">Rp 500.000/Malam</h6>
                     <div class="features mb-4">
                         <h6>Features</h6>
                         <span class="badge rounded-pill bg-light text-dark mb-3 text-wrap lh-base">2 Kasur</span>
@@ -67,7 +67,7 @@
                 <img src="{{asset('img/hotels2.jpg')}}" alt="Rooms Standard" class="card-img-top">
                 <div class="card-body">
                     <h5>Deluxe</h5>
-                    <h6 class="mb-4">Rp 500.000/Malam</h6>
+                    <h6 class="mb-4">Rp 800.000/Malam</h6>
                     <div class="features mb-4">
                         <h6>Features</h6>
                         <span class="badge rounded-pill bg-light text-dark mb-3 text-wrap lh-base">2 Kasur</span>
@@ -95,7 +95,7 @@
                 <img src="{{asset('img/hotels3.jpg')}}" alt="Rooms Standard" class="card-img-top">
                 <div class="card-body">
                     <h5>Family</h5>
-                    <h6 class="mb-4">Rp 700.000</h6>
+                    <h6 class="mb-4">Rp 1.200.000/Malam</h6>
                     <div class="features mb-4">
                         <h6>Features</h6>
                         <span class="badge rounded-pill bg-light text-dark mb-3 text-wrap lh-base">Outdoor</span>
