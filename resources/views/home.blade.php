@@ -14,15 +14,15 @@
 <div class="swiper mySwiper rounded shadow">
     <div class="swiper-wrapper">
         <div class="swiper-slide">
-            <img src="{{asset('img/hotels1.jpg')}}" alt="Testing" class="">
+            <img src="{{asset('img/hotels1.jpg')}}" alt="Hotel 1">
         </div>
 
         <div class="swiper-slide">
-            <img src="{{asset('img/hotels2.jpg')}}" alt="Testing" class="">
+            <img src="{{asset('img/hotels2.jpg')}}" alt="Hotel 2">
         </div>
 
         <div class="swiper-slide">
-            <img src="{{asset('img/hotels3.jpg')}}" alt="Testing" class="">
+            <img src="{{asset('img/hotels3.jpg')}}" alt="Hotel 3">
         </div>
     </div>
     <div class="swiper-pagination"></div>
@@ -36,7 +36,24 @@
         {{-- First Card --}}
         <div class="col-lg-4 col-md-6 my-3">
             <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
-                <img src="{{asset('img/hotels1.jpg')}}" alt="Rooms Standard" class="card-img-top">
+                {{-- Image Swipper JS --}}
+                <div class="swiper mySwiper rounded shadow">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="{{asset('img/reg/kamar_reg_1.jpg')}}" alt="Testing" class="">
+                        </div>
+                
+                        <div class="swiper-slide">
+                            <img src="{{asset('img/reg/kamar_reg_2.jpg')}}" alt="Testing" class="">
+                        </div>
+                
+                        <div class="swiper-slide">
+                            <img src="{{asset('img/reg/kamar_reg_3.jpg')}}" alt="Testing" class="">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
                 <div class="card-body">
                     <h5>Standar</h5>
                     <h6 class="mb-4">Rp 500.000/Malam</h6>
@@ -64,7 +81,24 @@
         {{-- Second --}}
         <div class="col-lg-4 col-md-6 my-3">
             <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
-                <img src="{{asset('img/hotels2.jpg')}}" alt="Rooms Standard" class="card-img-top">
+                {{-- Image Swipper JS --}}
+                <div class="swiper mySwiper rounded shadow">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="{{asset('img/del/deluxe_1.jpg')}}" alt="Testing" class="">
+                        </div>
+                
+                        <div class="swiper-slide">
+                            <img src="{{asset('img/del/deluxe_2.jpg')}}" alt="Testing" class="">
+                        </div>
+                
+                        <div class="swiper-slide">
+                            <img src="{{asset('img/reg/kamar_reg_3.jpg')}}" alt="Testing" class="">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
                 <div class="card-body">
                     <h5>Deluxe</h5>
                     <h6 class="mb-4">Rp 800.000/Malam</h6>
@@ -92,7 +126,24 @@
         {{-- Third --}}
         <div class="col-lg-4 col-md-6 my-3">
             <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
-                <img src="{{asset('img/hotels3.jpg')}}" alt="Rooms Standard" class="card-img-top">
+                {{-- Image Swipper JS --}}
+                <div class="swiper mySwiper rounded shadow">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="{{asset('img/fam/family_1.jpg')}}" alt="Testing" class="">
+                        </div>
+                
+                        <div class="swiper-slide">
+                            <img src="{{asset('img/fam/family_2.jpg')}}" alt="Testing" class="">
+                        </div>
+                
+                        <div class="swiper-slide">
+                            <img src="{{asset('img/fam/family_3.jpg')}}" alt="Testing" class="">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
                 <div class="card-body">
                     <h5>Family</h5>
                     <h6 class="mb-4">Rp 1.200.000/Malam</h6>
