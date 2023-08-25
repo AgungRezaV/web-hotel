@@ -47,7 +47,7 @@
             <label for="" class="form-label">Harga</label>
             <div class="input-group mb-3">
                 <span class="input-group-text">Rp</span>
-                <input required type="number" class="form-control bg-light fw-bold" placeholder="Harga" id="inputHarga" name="harga" readonly>
+                <input required type="number" class="form-control bg-light" placeholder="Harga" id="inputHarga" name="harga" readonly>
                 {{-- <div id="emailHelp" class="form-text">*Harga akan muncul setelah memilih kamar.</div> --}}
             </div>
 
@@ -72,9 +72,10 @@
             </div>
 
             {{-- Total Bayar --}}
-            <div class="mb-3">
-                <label class="form-label">Total Bayar</label>
-                <input required type="number" class="form-control" placeholder="Total Bayar" id="inputTotalBayar" name="total_bayar" readonly>
+            <label class="form-label">Total Bayar</label>
+            <div class="input-group mb-3">
+                <span class="input-group-text">Rp</span>
+                <input required type="number" class="form-control bg-light" placeholder="Total Bayar" id="inputTotalBayar" name="total_bayar" readonly>
             </div>
 
             {{-- Tombol Cek Harga --}}
