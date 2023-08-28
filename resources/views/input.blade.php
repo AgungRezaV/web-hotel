@@ -82,7 +82,7 @@
             <button type="button" class="btn btn-primary" onclick="updateTotalBayar()">Hitung Total Bayar</button>
 
             <!-- Button Submit Input -->
-            <button type="submit" name="submit" value="Save" class="btn btn-success" onclick="updateTotalBayar()">Submit</button>
+            <button type="submit" name="submit" value="Save" class="btn btn-success" onclick="updateTotalBayar()">Pesan</button>
         </form>
     </div>
 

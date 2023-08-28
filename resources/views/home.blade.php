@@ -73,7 +73,7 @@
                         <i class="fa-solid fa-star text-warning"></i>
                         <i class="fa-solid fa-star"></i>
                     </div>
-                    <a href="/input" class="btn btn-success btn-md text-white shadow-none">Book Now</a>
+                    <a href="/input" class="btn btn-success btn-md text-white shadow-none">Pesan Sekarang</a>
                 </div>
             </div>
         </div>
@@ -118,7 +118,7 @@
                         <i class="fa-solid fa-star text-warning"></i>
                         <i class="fa-solid fa-star"></i>
                     </div>
-                    <a href="/input" class="btn btn-success btn-md text-white shadow-none">Book Now</a>
+                    <a href="/input" class="btn btn-success btn-md text-white shadow-none">Pesan Sekarang</a>
                 </div>
             </div>
         </div>
@@ -130,7 +130,10 @@
                 <div class="swiper mySwiper rounded shadow">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="{{asset('img/fam/family_1.jpg')}}" alt="Testing" class="">
+                            {{-- <img src="{{asset('img/fam/family_1.jpg')}}" alt="Testing" class=""> --}}
+                            <video height="235" controls>
+                                <source src="{{asset('video/video_1.mp4')}}" type="video/mp4">
+                            </video>
                         </div>
                 
                         <div class="swiper-slide">
@@ -164,7 +167,7 @@
                         <i class="fa-solid fa-star text-warning"></i>
                         <i class="fa-solid fa-star text-warning"></i>
                     </div>
-                    <a href="/input" class="btn btn-success btn-md text-white shadow-none">Book Now</a>
+                    <a href="/input" class="btn btn-success btn-md text-white shadow-none">Pesan Sekarang</a>
                 </div>
             </div>
         </div>
